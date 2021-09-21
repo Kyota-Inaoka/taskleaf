@@ -1,7 +1,7 @@
 class Admin::UsersController < ApplicationController
 
   def index
-    @user = User.all
+    @users = User.all
   end
 
   def show
@@ -20,7 +20,7 @@ class Admin::UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to @user, notice: "ユーザー「#{@user.name}」を登録しました"
+      redirect_to admin_user_url(@user), notice: "ユーザー「#{@user.name}」を登録しました"
     else
       render :new
     end
