@@ -4,6 +4,11 @@ class Task < ApplicationRecord
   validates :name, length: {maximum: 30}
     
   validate :validate_name_not_including_comma
+  belongs_to :user
+  
+  scope :recent, -> { order(created_at: :desc)}
+  scope :older, -> { order(:created_at)}
+  
   private
   
   def set_nameless_name
@@ -12,6 +17,5 @@ class Task < ApplicationRecord
     
   def validate_name_not_including_comma
     errors.add(:name, 'にコンマを付けることはできません') if name&.include?(',')
-    #binding.pry
   end
 end
