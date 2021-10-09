@@ -10,7 +10,7 @@ end
 #gem 'rails', '~> 5.0.7', '>= 5.0.7.2'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.2'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', "~> 1.3.6"
+#gem 'sqlite3', "~> 1.3.6"
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -20,7 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -65,3 +65,4 @@ gem 'bootstrap'
 gem 'pry-rails'
 
 gem 'rails_autolink'
+gem 'pg'
